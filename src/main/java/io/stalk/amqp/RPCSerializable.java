@@ -1,4 +1,4 @@
-package com.gsshop.amqp;
+package io.stalk.amqp;
 
 import java.io.Serializable;
 

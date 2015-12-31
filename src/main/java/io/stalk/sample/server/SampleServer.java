@@ -1,20 +1,20 @@
-package com.gsshop.payment.mobilians.server;
+package io.stalk.sample.server;
 
-import com.gsshop.amqp.RPCServer;
-import com.gsshop.payment.mobilians.MobiliansParam;
-import com.gsshop.payment.mobilians.MobiliansResult;
+import io.stalk.amqp.RPCServer;
+import io.stalk.sample.SampleParam;
+import io.stalk.sample.SampleResult;
 
-public class MobiliansServer extends RPCServer<MobiliansParam, MobiliansResult> {
+public class SampleServer extends RPCServer<SampleParam, SampleResult> {
 
-    private static String QUEUE_NAME = "payment.mobilians";
+    private static String QUEUE_NAME = "queue.sample";
 
     public static void main(String[] args) {
-        MobiliansServer process = new MobiliansServer();
+        SampleServer process = new SampleServer();
         process.execute(QUEUE_NAME);
     }
 
     @Override
-    public MobiliansResult message(MobiliansParam input) {
+    public SampleResult message(SampleParam input) {
 
 
         /** [START] Handling request parameters **/
@@ -28,7 +28,7 @@ public class MobiliansServer extends RPCServer<MobiliansParam, MobiliansResult> 
 
 
         /** [START] Create Response Object **/
-        MobiliansResult result = new MobiliansResult();
+        SampleResult result = new SampleResult();
         result.setMode("OK");
         result.setErrorMessage("");
         /** [END] Create Response Object **/

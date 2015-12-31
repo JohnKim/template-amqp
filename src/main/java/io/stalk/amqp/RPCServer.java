@@ -1,4 +1,4 @@
-package com.gsshop.amqp;
+package io.stalk.amqp;
 
 import com.rabbitmq.client.AMQP.BasicProperties;
 import com.rabbitmq.client.Channel;

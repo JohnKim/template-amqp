@@ -1,27 +1,27 @@
-package com.gsshop.payment.mobilians.client;
+package io.stalk.sample.client;
 
-import com.gsshop.amqp.RPCClient;
-import com.gsshop.payment.mobilians.MobiliansParam;
-import com.gsshop.payment.mobilians.MobiliansResult;
+import io.stalk.amqp.RPCClient;
+import io.stalk.sample.SampleParam;
+import io.stalk.sample.SampleResult;
 
-public class MobiliansClient {
+public class SampleClient {
 
     public static void main(String[] argv) {
 
-        RPCClient mobiliansRPC = null;
+        RPCClient sampleRPC = null;
         try {
 
-            mobiliansRPC = new RPCClient("payment.mobilians");
+            sampleRPC = new RPCClient("queue.sample");
 
             /** [START] Create Request Object **/
-            MobiliansParam param = new MobiliansParam();
+            SampleParam param = new SampleParam();
             param.setId("IIIID");
             param.setReorderKey("RRRReorderKey");
             param.setSvcid("SSSSSvcid");
             /** [END] Create Request Object **/
 
 
-            MobiliansResult result = (MobiliansResult) mobiliansRPC.execute(param);
+            SampleResult result = (SampleResult) sampleRPC.execute(param);
 
 
             /** [START] Implementing process with the response from MQ Broker **/
@@ -31,9 +31,9 @@ public class MobiliansClient {
         } catch (Exception e) {
             e.printStackTrace();
         } finally {
-            if (mobiliansRPC != null) {
+            if (sampleRPC != null) {
                 try {
-                    mobiliansRPC.close();
+                    sampleRPC.close();
                 } catch (Exception ignore) {
                 }
             }

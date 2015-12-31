@@ -1,4 +1,4 @@
-package com.gsshop.amqp;
+package io.stalk.amqp;
 
 import com.sun.xml.internal.ws.encoding.soap.SerializationException;
 

@@ -1,11 +1,11 @@
-package com.gsshop.payment.mobilians;
+package io.stalk.sample;
 
-import com.gsshop.amqp.RPCSerializable;
+import io.stalk.amqp.RPCSerializable;
 
 /**
  * Created by johnkim on 12/30/15.
  */
-public class MobiliansParam extends RPCSerializable {
+public class SampleParam extends RPCSerializable {
 
     private String mode;
     private String reorderKey;
@@ -46,7 +46,7 @@ public class MobiliansParam extends RPCSerializable {
 
     @Override
     public String toString() {
-        return "MobiliansParam{" +
+        return "SampleParam{" +
                 "mode='" + mode + '\'' +
                 ", reorderKey='" + reorderKey + '\'' +
                 ", svcid='" + svcid + '\'' +

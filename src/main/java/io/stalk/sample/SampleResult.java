@@ -1,11 +1,11 @@
-package com.gsshop.payment.mobilians;
+package io.stalk.sample;
 
-import com.gsshop.amqp.RPCSerializable;
+import io.stalk.amqp.RPCSerializable;
 
 /**
  * Created by johnkim on 12/30/15.
  */
-public class MobiliansResult extends RPCSerializable {
+public class SampleResult extends RPCSerializable {
 
     private String mode;
     private String errorMessage;
@@ -28,7 +28,7 @@ public class MobiliansResult extends RPCSerializable {
 
     @Override
     public String toString() {
-        return "MobiliansResult{" +
+        return "SampleResult{" +
                 "mode='" + mode + '\'' +
                 ", errorMessage='" + errorMessage + '\'' +
                 '}';
