@@ -1,4 +1,4 @@
-package io.stalk.amqp;
+package io.stalk.amqp.rpc;
 
 import java.io.Serializable;
 

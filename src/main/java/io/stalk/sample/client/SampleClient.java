@@ -1,6 +1,6 @@
 package io.stalk.sample.client;
 
-import io.stalk.amqp.RPCClient;
+import io.stalk.amqp.rpc.RPCClient;
 import io.stalk.sample.SampleParam;
 import io.stalk.sample.SampleResult;
 

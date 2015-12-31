@@ -1,6 +1,6 @@
 package io.stalk.sample;
 
-import io.stalk.amqp.RPCSerializable;
+import io.stalk.amqp.rpc.RPCSerializable;
 
 /**
  * Created by johnkim on 12/30/15.
