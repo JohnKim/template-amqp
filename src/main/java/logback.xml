@@ -126,3 +126,9 @@
     </root>
 
 </configuration>
+
+
+<!--
+ ** different log file for each thread **
+ http://www.mkyong.com/logging/logback-different-log-file-for-each-thread/
+-->

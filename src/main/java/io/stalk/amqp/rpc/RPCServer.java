@@ -15,7 +15,7 @@ public abstract class RPCServer<IN extends RPCSerializable, OUT extends RPCSeria
 
     public static Logger logger = LoggerFactory.getLogger(RPCServer.class);
 
-    public static String LOG = "logFileName"; // the file name for logback MDC.
+    public static String LOG_FILE_NAME = "logFileName"; // the file name for logback MDC.
 
     public void execute(String queueName) {
 

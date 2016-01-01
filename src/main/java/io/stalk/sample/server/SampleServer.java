@@ -3,9 +3,13 @@ package io.stalk.sample.server;
 import io.stalk.amqp.rpc.RPCServer;
 import io.stalk.sample.SampleParam;
 import io.stalk.sample.SampleResult;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.slf4j.MDC;
 
 public class SampleServer extends RPCServer<SampleParam, SampleResult> {
 
+    private static Logger logger = LoggerFactory.getLogger(SampleServer.class);
     private static String QUEUE_NAME = "queue.sample";
 
     public static void main(String[] args) {
@@ -17,8 +21,10 @@ public class SampleServer extends RPCServer<SampleParam, SampleResult> {
     public SampleResult message(SampleParam input) {
 
 
+        MDC.put(LOG_FILE_NAME, "sample"); // log file name.
+
         /** [START] Handling request parameters **/
-        System.out.println(input);
+        logger.debug(input.toString());
         /** [END] Handling request parameters **/
 
 
@@ -33,6 +39,7 @@ public class SampleServer extends RPCServer<SampleParam, SampleResult> {
         result.setErrorMessage("");
         /** [END] Create Response Object **/
 
+        MDC.remove(LOG_FILE_NAME);
 
         return result;
 
